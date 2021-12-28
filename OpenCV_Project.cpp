@@ -13,14 +13,14 @@ CascadeClassifier eye;
 /*
 void FaceAndEyeDetect(Mat);
 
-// »çÁø
+// ì‚¬ì§„
 
 int main() {
-	Mat f = imread("C:\\Users\\Á¤Çö¼®\\Desktop\\Á¤Çö¼®\\¾ÆÀÌÀ¯.jpg");
+	Mat f = imread("C:\\Users\\ì •í˜„ì„\\Desktop\\ì •í˜„ì„\\ì•„ì´ìœ .jpg");
 	assert(f.data);
 
-	bool b1 = face.load(face_cascade); // ¾ó±¼
-	bool b2 = eye.load(eye_cascade);   // ´«
+	bool b1 = face.load(face_cascade); // ì–¼êµ´
+	bool b2 = eye.load(eye_cascade);   // ëˆˆ
 	assert(b1 && b2);
 	FaceAndEyeDetect(f);
 
@@ -29,7 +29,7 @@ int main() {
 }
 
 
-// Ä·
+// ìº 
 /*
 int main() {
 	VideoCapture v(0);
@@ -64,7 +64,7 @@ void FaceAndEyeDetect(Mat img) {
 		rectangle(img, face_pos[i], Scalar(255, 0, 0), 2);
 	}
 
-	// ´« °ËÃâ
+	// ëˆˆ ê²€ì¶œ
 	for (int i = 0; i < face_pos.size(); i++) {
 		std::vector<Rect> eye_pos;
 		Mat roi = gray(face_pos[i]);
@@ -77,17 +77,17 @@ void FaceAndEyeDetect(Mat img) {
 			circle(img, center, radius, Scalar(0, 0, 255), 2, 8, 0);
 		}
 	}
-	namedWindow("¾ó±¼ °ËÃâ");
-	imshow("¾ó±¼ °ËÃâ", img);
+	namedWindow("ì–¼êµ´ ê²€ì¶œ");
+	imshow("ì–¼êµ´ ê²€ì¶œ", img);
 }
 */
 
-// ¾Ë°í¸®ÁòÀÀ¿ë 14ÁÖÂ÷ OpenCV
+// ì•Œê³ ë¦¬ì¦˜ì‘ìš© 14ì£¼ì°¨ OpenCV
 
 int main() {
 
-	Mat imgColor = imread("C:\\Users\\Á¤Çö¼®\\Desktop\\Á¤Çö¼®\\¾ÆÀÌÀ¯.jpg", 1);
-	Mat imgGray = imread("C:\\Users\\Á¤Çö¼®\\Desktop\\Á¤Çö¼®\\¾ÆÀÌÀ¯.jpg", 0);
+	Mat imgColor = imread("C:\\Users\\ì •í˜„ì„\\Desktop\\ì •í˜„ì„\\ì•„ì´ìœ .jpg", 1);
+	Mat imgGray = imread("C:\\Users\\ì •í˜„ì„\\Desktop\\ì •í˜„ì„\\ì•„ì´ìœ .jpg", 0);
 
 	imshow("color", imgColor);
 	imshow("gray", imgGray);
