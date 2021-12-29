@@ -37,6 +37,7 @@ X, y = load_dbscore_data()
 
 data = pd.read_csv('db_score.csv')
 
+
 # y = mX + c
 
 X_const = sm.add_constant(X) # 상수항 추가
