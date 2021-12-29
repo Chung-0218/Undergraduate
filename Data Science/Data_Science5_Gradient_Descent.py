@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import statsmodels.api as sm
 import time
 
+# DB connect
 def load_dbscore_data():
     conn = pymysql.connect(host='localhost', user='root',
                     password='626537', db='data_science3', charset='utf8')
@@ -35,6 +36,7 @@ X, y = load_dbscore_data()
 
 # y = mX + c
 
+# OLS Regression
 import statsmodels.api as sm
 X_const = sm.add_constant(X)
 
@@ -58,8 +60,7 @@ y_pred = m*X + c
 # plt.show()
 
 
-# Gradient Descent
-
+# Non-Vectorized Gradient Descent
 def gradient_descent_naive(X, y):
 
     epochs = 100000
@@ -105,7 +106,7 @@ def gradient_descent_naive(X, y):
 # print("gdn_m=%f, gdn_c=%f" %(m, c) )
 # print("ls_m=%f, ls_c=%f" %(ls_m, ls_c) )
 
-
+# Vectorized GD
 def gradient_descent_vectorized(X, y):
     epochs = 100000
     min_grad = 0.0001
