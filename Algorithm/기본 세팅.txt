@@ -1,0 +1,36 @@
+#include <Windows.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable: 4996)
+#define MAX_NODE 100
+#define MAX 100
+#define INFINITE 100
+#define is_stack_empty() (top < 0)
+
+FILE* fp;
+
+int main() {
+
+	LARGE_INTEGER freq, start, stop;
+	double diff;
+
+	QueryPerformanceFrequency(&freq); // computer frequency
+	QueryPerformanceCounter(&start);  // starting point
+
+	int V, E;
+	fp = fopen("C://Users//정현석//Desktop//4-1강의//알고리즘응용//graph.txt", "rt");
+
+	
+	fclose(fp);
+	
+	QueryPerformanceCounter(&stop);   // stopping point
+	diff = (double)(stop.QuadPart - start.QuadPart) / freq.QuadPart;
+	
+	printf("\n");
+	printf("프로그램 실행시간: %.6f초\n", diff);
+
+	return 0;
+}
