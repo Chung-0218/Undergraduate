@@ -24,7 +24,7 @@ int main() {
 	QueryPerformanceCounter(&start);  // starting point
 
 	int A, B;
-	printf("A, B¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+	printf("A, Bë¥¼ ìž…ë ¥í•˜ì‹œì˜¤: ");
 	scanf("%d, %d", &A, &B);
 	int C = 0;
 
@@ -51,7 +51,7 @@ int main() {
 	QueryPerformanceCounter(&stop);   // stopping point
 	diff = (double)(stop.QuadPart - start.QuadPart) / freq.QuadPart;
 	
-	printf("ÇÁ·Î±×·¥ ½ÇÇà½Ã°£: %.6fÃÊ\n", diff);
+	printf("í”„ë¡œê·¸ëž¨ ì‹¤í–‰ì‹œê°„: %.6fì´ˆ\n", diff);
 
 	return 0;
 }
