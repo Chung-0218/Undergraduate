@@ -85,3 +85,5 @@ print("train loss=", history.history['loss'][-1])
 print("test loss=", history.history['val_loss'][-1])
 
 predict_new_sample(model, np.array([0.6, 0.3, 0.1, 0.2])) # X1~X4 값을 임의로 설정하고 예측
+
+# YouTube 발표 - https://youtu.be/YMth4ijCGv0
