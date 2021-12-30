@@ -1,4 +1,5 @@
 # Keras Non-Linear Regression
+# Hyper-parameter tuning
 import numpy as np
 import matplotlib.pyplot as plt
 
