@@ -66,19 +66,19 @@ void* llfv_search(void* key, node* base, int* num, int width, FCMP fcmp) {
 	return v;
 }
 
-void shell_sort(int* a, int n) {  // ½© Á¤·Ä Á¤ÀÇ
-	int i, j, k, h, v;            // ½© Á¤·ÄÀ» À§ÇÑ º¯¼öµé Á¤ÀÇ
-	for (h = 1; h < n; h = 3 * h + 1); // h=3h+1 ·Î intervaslÀ» ¼³Á¤ÇÔ
-	for (h /= 3; h > 0; h /= 3) { // h¸¦ 3À¸·Î ³ª´²°¡¸é¼­ ¹Ýº¹¹® ½ÃÇà
-		for (i = 0; i < h; i++) { // ¹è¿­¿¡ ´ëÇÑ ¹Ýº¹¹® ½ÃÇà
-			for (j = i + h; j < n; j += h) { // insertion Á¤·Ä°ú µ¿ÀÏ, intervalÀ» ºñ±³
-				v = a[j]; // °ªÀÇ À§Ä¡¸¦ º¯°æÇÏ±â À§ÇØ Áß°£¿¡ °ÅÄ¡´Â °ª v¿¡ ÀúÀå
-				k = j;    // °ªÀÇ À§Ä¡¸¦ º¯°æÇÏ±â À§ÇØ Áß°£¿¡ °ÅÄ¡´Â °ª k¿¡ ÀúÀå
-				while ((k > h - 1) && (a[k - h] > v)) { // °ªÀ» ºñ±³ÇÏ°í ´õ ÀÛÀº °ªÀ» ¹è¿­ÀÇ ¾ÕÀ¸·Î ¹Ù²Ù´Â ¹Ýº¹¹®
-					a[k] = a[k - h]; // ¹è¿­ÀÇ °ªÀ» ±³È¯
-					k -= h; // ´ÙÀ½ °ª¿¡ ´ëÇØ ¹Ýº¹ ½ÃÇà
+void shell_sort(int* a, int n) {  // ì‰˜ ì •ë ¬ ì •ì˜
+	int i, j, k, h, v;            // ì‰˜ ì •ë ¬ì„ ìœ„í•œ ë³€ìˆ˜ë“¤ ì •ì˜
+	for (h = 1; h < n; h = 3 * h + 1); // h=3h+1 ë¡œ intervaslì„ ì„¤ì •í•¨
+	for (h /= 3; h > 0; h /= 3) { // hë¥¼ 3ìœ¼ë¡œ ë‚˜ëˆ ê°€ë©´ì„œ ë°˜ë³µë¬¸ ì‹œí–‰
+		for (i = 0; i < h; i++) { // ë°°ì—´ì— ëŒ€í•œ ë°˜ë³µë¬¸ ì‹œí–‰
+			for (j = i + h; j < n; j += h) { // insertion ì •ë ¬ê³¼ ë™ì¼, intervalì„ ë¹„êµ
+				v = a[j]; // ê°’ì˜ ìœ„ì¹˜ë¥¼ ë³€ê²½í•˜ê¸° ìœ„í•´ ì¤‘ê°„ì— ê±°ì¹˜ëŠ” ê°’ vì— ì €ìž¥
+				k = j;    // ê°’ì˜ ìœ„ì¹˜ë¥¼ ë³€ê²½í•˜ê¸° ìœ„í•´ ì¤‘ê°„ì— ê±°ì¹˜ëŠ” ê°’ kì— ì €ìž¥
+				while ((k > h - 1) && (a[k - h] > v)) { // ê°’ì„ ë¹„êµí•˜ê³  ë” ìž‘ì€ ê°’ì„ ë°°ì—´ì˜ ì•žìœ¼ë¡œ ë°”ê¾¸ëŠ” ë°˜ë³µë¬¸
+					a[k] = a[k - h]; // ë°°ì—´ì˜ ê°’ì„ êµí™˜
+					k -= h; // ë‹¤ìŒ ê°’ì— ëŒ€í•´ ë°˜ë³µ ì‹œí–‰
 				}
-				a[k] = v; // ¹è¿­ÀÇ °ªÀ» ±³È¯
+				a[k] = v; // ë°°ì—´ì˜ ê°’ì„ êµí™˜
 			}
 		}
 	}
