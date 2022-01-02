@@ -1,1 +1,1 @@
-The things I implemented during undergraduate lectures.
+These are what I practiced during undergraduate lectures.
